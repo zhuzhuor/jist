@@ -1,5 +1,10 @@
+/*
+ * Copyright (C) 2013 Bo Zhu http://zhuzhu.org
+ * MIT License
+ */
+
 /*jslint browser: true */
-/*global marked: false, moment: false, $: false, URI: false, hljs: false, head: false */
+/*global marked: false, moment: false, $: false, URI: false, hljs: false, head: false, MathJax: false */
 
 "use strict";
 

@@ -1,3 +1,8 @@
+/*
+ * Copyright (C) 2013 Bo Zhu http://zhuzhu.org
+ * MIT License
+ */
+
 "use strict";
 /*global chrome: false */
 
