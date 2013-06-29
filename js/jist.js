@@ -295,7 +295,7 @@ function display(user, tag, id) {
 
 
 function jist_main() {  // will be invoked in head.ready()
-    if (jist.id !== null || (jist.user !== null && jist.tag !== null)) {
+    if (typeof jist.id !== 'undefined' || (typeof jist.user !== 'undefined' && typeof jist.tag !== 'undefined')) {
         // for the case that users modify the variables in jist.html
         // in order to use under their own domain names
         display(jist.user, jist.tag, jist.id);
