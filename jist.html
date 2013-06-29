@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jist.in</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            "use strict";
+            // change these to work for your own domain
+            // var jist = jist || {};
+            // jist.id = 5855373;
+            // jist.tag = tagname;
+            // jist.user = username;
+
+
+            var root_domains = [
+                'jist.in',
+                '127.0.0.1.xip.io'
+            ];
+            var i;
+            for (i = 0; i < root_domains.length; i++) {
+                if (document.location.hostname === root_domains[i]) {
+                    var segments = document.location.pathname.split('/');
+                    if (segments.length > 2) {
+                        // no need for tag if no username is presented
+                        // redirect to root domain to reduce cloudfront cost
+                        window.location.replace('http://' + document.location.host + '/' + segments[segments.length - 1]);
+                        break;
+                    }
+                }
+            }
+        </script>
+        <link href="http://netdna.bootstrapcdn.com/bootswatch/2.3.2/readable/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/styles/github.min.css" rel="stylesheet" media="screen">
+        <link href="css/style.css" rel="stylesheet" media="screen">
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/headjs/0.99/head.min.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="container-fluid">
+                <div id="header" class="muted"></div>
+                <div id="content"></div>
+                <div id="status"></div>
+            </div>
+            <div id="pusher"></div>
+        </div>
+        <div id="footer" class="muted">
+            <div class="container-fluid">
+                Proudly presented to you by <a href="http://jist.in">jist.in</a> with client-side JavaScript.
+            </div>
+        </div>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+            });
+        </script>
+        <script type="text/javascript">
+            head.js("http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js");
+            head.js("http://cdnjs.cloudflare.com/ajax/libs/URI.js/1.7.2/URI.min.js");
+            head.js("http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js");
+            head.js("http://cdnjs.cloudflare.com/ajax/libs/marked/0.2.9/marked.min.js", function() {
+                marked.setOptions({
+                    pedantic: false,
+                    gfm: true,
+                    sanitize: true,
+                    tables: true,
+                    breaks: true,
+                    smartLists: true,
+                    smartypants: false,
+                    langPrefix: ''
+                });
+            });
+            head.js("http://cdnjs.cloudflare.com/ajax/libs/highlight.js/7.3/highlight.min.js");
+            head.js("http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML");
+            head.js("js/jist.js");
+            head.ready(function() {
+                jist_main();
+            });           
+        </script>
+    </body>
+</html>

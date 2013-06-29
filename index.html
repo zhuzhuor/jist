@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jist.in - about</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            "use strict";
+            var root_domains = [
+                '.jist.in',
+                '.127.0.0.1.xip.io'
+            ];
+            var i;
+            for (i = 0; i < root_domains.length; i++) {
+                if (document.location.hostname.slice(-root_domains[i].length) === root_domains[i]) {
+                    window.location.replace(document.URL + 'blog/');  // http://goo.gl/dyPIa
+                    break;
+                }
+            }
+        </script>
+        <link href="//netdna.bootstrapcdn.com/bootswatch/2.3.2/readable/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="/css/style.css" rel="stylesheet" media="screen">
+    </head>
+    <body lang="en">
+        <div id="wrapper">
+            <div class="container-fluid">
+                <div id="content">
+                    <h1>jist.in</h1>
+                    <hr>
+                    <div class="section">
+                        This is an (almost) server-less tool to display <a href="https://gist.github.com/">GitHub Gists</a> for comfortable reading.<br>It processes gist contents entirely by client-side <em>J</em>avaScript in users' browsers.
+                    </div>
+                    <div class="section">
+                        <h2>Usage</h2>
+                        For simplest cases, you can
+                        <ol>
+                            <li><a href="https://gist.github.com/">Create a gist</a> with <a href="http://daringfireball.net/projects/markdown/">a Markdown file</a>. The gist can be either public or private.</li>
+                            <li>Copy the gist's numerical ID <code>gist_id</code> from the page URL, which looks like
+                                <ul>
+                                    <li><em>5794706</em> for public gists, or</li>
+                                    <li><em>908e37c83da28b50a897</em> for private ones.</li>
+                                </ul>
+                            </li>
+                            <li>Comfortably read at <code>http://jist.in/gist_id</code>.<br>
+                                You can check out <a href="http://jist.in/5855373">jist.in/5855373</a> for an example post.
+                        </ol>
+
+                        Or you can use the <a href="https://chrome.google.com/webstore/detail/cmgkjoejbnapagcdedjclloghamckmbb">Chrome extension</a> or this <a href='javascript:(function(){var a=/^https:\/\/gist\.github\.com\/([^\/]+)\/([^\/]+)/im,b=document.URL;a.test(b)&&(a=b.match(a),window.location.href="http://"+a[1]+".jist.in/"+a[2])})();'>jist.in bookmarklet</a> on the gist page to automatically jump to its corresponding jist.in page. 
+                    </div>
+                    <p>
+                        <h2>Features</h2>
+                        Besides <a href="http://daringfireball.net/projects/markdown/">Markdown</a>, <em>jist.in</em> also supports:
+                        <ul>
+                            <li>Local usage (completely server-less),</li>
+                            <li>Custom CSS (<a href="http://jist.in/5855664">check out the example</a>),</li>
+                            <li>Custom JavaScript (<a href="http://zhuzhuor.jist.in/5843799">example from three.js</a>),</li>
+                            <li>HTML content (<a href="http://mbostock.jist.in/1353700">Mike Bostock’s epicyclic gearing</a>),</li>
+                            <li>LaTeX for mathematical content (<a href="http://zhuzhuor.jist.in/5855373">a short bio of Évariste Galois</a>),</li>
+                            <li>List of gists with specific tags, e.g. <em>blog</em> (<a href="http://zhuzhuor.jist.in/jist-blog/">zhuzhuor.jist.in/jist-blog/</a>),</li>
+                            <li>Custom domain name (<a href="http://jist-blog.zhuzhu.org">jist-blog.zhuzhu.org</a>).</li>
+                        </ul>
+                        For detailed usage instructions, please refer to <a href="https://github.com/zhuzhuor/jist/">the GitHub repo</a>.
+                    </p>
+                </div>
+                <!-- <div id="status"></div> -->
+            </div>
+            <div id="pusher"></div>
+        </div>
+        <div id="footer" class="muted">
+            <div class="container-fluid">
+                Proudly presented to you by <a href="http://zhuzhu.org">zhuzhuor</a>.
+            </div>
+        </div>
+        <script async type="text/javascript" src="/js/analytics.js"></script>
+    </body>
+</html>
