@@ -1,3 +1,6 @@
+# Copyright (C) 2013 Bo Zhu http://zhuzhu.org
+# MIT License
+
 # there should be no need to crawl the pages except index.html
 # since these AJAX based pages are usually not SEO friendly
 
