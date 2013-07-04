@@ -1,4 +1,4 @@
-# jist.in
+# jist.in [![Build Status](https://drone.io/github.com/zhuzhuor/jist/status.png)](https://drone.io/github.com/zhuzhuor/jist/latest)
 
 [jist.in](http://jist.in) is a JavaScript experiment/showcase that renders the contents of GitHub Gists entirely by client-side JavaScript.
 
