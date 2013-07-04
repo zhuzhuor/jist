@@ -2,7 +2,7 @@
 
 [jist.in](http://jist.in) is a JavaScript experiment/showcase that renders the contents of GitHub Gists entirely by client-side JavaScript.
 
-The idea mainly comes from [gist.io](http://gist.io) and [bl.ocks.org](http://bl.ocks.org).
+The idea originates from [gist.io](http://gist.io) and [bl.ocks.org](http://bl.ocks.org).
 
 ## Usage
 
@@ -18,12 +18,11 @@ The idea mainly comes from [gist.io](http://gist.io) and [bl.ocks.org](http://bl
 You can download the source code and open it from local file paths without web server support.
 
 * `file:///path/jist.html?id=5855373` is the same as `http://jist.in/5855373`
-* `file:///path/jist.html?id=5855373&user=username` checks the gist owner
 * `file:///path/jist.html?user=username&tag=blog` displays user's blog post list
 
 ### Markdown Files
 
-You can have multiple Markdown files in one gist. They are sorted according to their file names, so you can add numeric prefixes to file names to keep them displayed in order.
+You can have multiple Markdown files in one gist. They are sorted according to their file names, so you can add numeric prefixes to file names to make them displayed in order.
 
 ### Custom CSS
 
@@ -35,7 +34,7 @@ Add a CSS file `custom.css`, and it will be automatically append to head before 
 
 The custom JavaScript only works on users' sub-domains, such as `http://zhuzhuor.jist.in/5855373`.
 
-Add a JavaScript file `custom.js`, and it will be loaded after everything is loaded.
+Add a JavaScript file `custom.js`, and it will be executed after other files are loaded.
 
 ### HTML Files
 
@@ -47,16 +46,16 @@ HTML files are also only parsed under users' sub-domains.
 
 ### LaTeX
 
-Enclose your LaTeX contents between `$...$` and they will be processed automatically.
+Enclose your LaTeX contents by `$...$` and they will be processed automatically.
 
 ### Custom Domain Names
 
 1. Change the CNAME setting of your custom domain to `cname.jist.in`.
-2. Modify the TXT record of your custom domain to the forms like `id=5855373`, `id=5855373&user=username` or `user=username&tag=blog`.
+2. Modify the TXT record of your custom domain to the forms like `id=5855373` or `user=username&tag=blog`.
 
 The corresponding DNS records will be automatically retrieved via [jsondns](http://json.org), and the targeted gist contents will be displayed accordingly.
 
-This barely servers as an experiment, please do not rely on it for long-term usage, since this functionality requires a self-hosted reverse proxy server and it currently runs on a tiny VPS host of $15/year.
+This barely serves as an experiment. Please do not rely on it for long-term usage, since this functionality requires a self-hosted reverse proxy server (currently running on a tiny VPS host of $15/year).
 
 It is recommended to upload jist.html and necessary files to your own servers, such as [AWS S3](http://aws.amazon.com/s3/) or [GitHub Pages](http://pages.github.com/). You can modify the variables in the header of jist.html to pass the jsondns look-up process.
 
@@ -66,6 +65,7 @@ It is recommended to upload jist.html and necessary files to your own servers, s
 The biggest drawback of this AJAX-based web app might be it is bad for SEO, which means the contents of web pages may not be indexed by search engines.
 
 Unless you want to hide some of your contents from search engines, it is not recommended to use jist.in as your own websites, including personal blogs.
+
 
 ## Dependencies
 
