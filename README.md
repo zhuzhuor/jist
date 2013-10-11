@@ -81,3 +81,7 @@ Unless you want to hide some of your contents from search engines, it is not rec
 ## License
 
 MIT
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/zhuzhuor/jist/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
