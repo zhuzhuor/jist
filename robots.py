@@ -7,7 +7,9 @@
 import webapp2
 
 # http://goo.gl/gwU3I
-allow_only_root = """User-agent: *
+allow_only_root = """User-agent: Googlebot
+Disallow:
+User-agent: *
 Allow: /index.html
 Disallow: /0
 Disallow: /1
@@ -29,7 +31,9 @@ Disallow: /j
 Disallow: /*/
 """
 
-disallow_all = """User-agent: *
+disallow_all = """User-agent: Googlebot
+Disallow:
+User-agent: *
 Disallow: /
 """
 

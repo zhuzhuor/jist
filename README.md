@@ -59,14 +59,6 @@ This barely serves as an experiment. Please do not rely on it for long-term usag
 
 It is recommended to upload jist.html and necessary files to your own servers, such as [AWS S3](http://aws.amazon.com/s3/) or [GitHub Pages](http://pages.github.com/). You can modify the variables in the header of jist.html to pass the jsondns look-up process.
 
-
-## Disadvantage
-
-The biggest drawback of this AJAX-based web app might be it is bad for SEO, which means the contents of web pages may not be indexed by search engines.
-
-Unless you want to hide some of your contents from search engines, it is not recommended to use jist.in as your own websites, including personal blogs.
-
-
 ## Dependencies
 
 * [Bootswatch Readable](http://bootswatch.com/readable/) -- CSS style for legibility
@@ -81,7 +73,3 @@ Unless you want to hide some of your contents from search engines, it is not rec
 ## License
 
 MIT
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/zhuzhuor/jist/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
